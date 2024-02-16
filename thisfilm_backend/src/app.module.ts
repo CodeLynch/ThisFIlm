@@ -4,9 +4,24 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { MovieModule } from './movie/movie.module';
 import { CommentModule } from './comment/comment.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [UserModule, MovieModule, CommentModule],
+  imports: [
+    UserModule, 
+    MovieModule, 
+    CommentModule,
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'root',
+      database: 'db_thisfilm'
+    }),
+    ConfigModule.forRoot(),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
