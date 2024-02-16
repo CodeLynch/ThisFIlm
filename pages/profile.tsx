@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Bebas_Neue } from "next/font/google";
 import Comment from "@/components/profile/user-comment";
 import UserComment from "@/components/profile/user-comment";
+import PaginationComponent from "@/components/pagination/pagination";
 
 const font = Bebas_Neue({ weight:"400", subsets:['latin']});
 
@@ -24,7 +25,9 @@ export default function ProfilePage(){
             <UserComment/>
             <UserComment/>
             <UserComment/>
-            <p className="text-center">Pagination here: &lt; 1, 2, 3, 4, ... &gt; </p>
+            <div className="flex justify-center w-full px-2">
+                <PaginationComponent/>
+            </div>
         </div>
     </div>
     </div>
