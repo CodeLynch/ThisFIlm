@@ -1,3 +1,4 @@
+import { Exclude } from "class-transformer";
 import { Comment } from "src/comment/comment";
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
@@ -13,6 +14,7 @@ export class User{
     displayName:string;
 
     @Column()
+    @Exclude()
     password:string;      
 
     @OneToMany(()=>Comment, Comment => Comment.user)

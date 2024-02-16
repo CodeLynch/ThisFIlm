@@ -6,6 +6,8 @@ import { MovieModule } from './movie/movie.module';
 import { CommentModule } from './comment/comment.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
+import { CommonModule } from './common/common.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,9 +20,13 @@ import { ConfigModule } from '@nestjs/config';
       port: 3306,
       username: 'root',
       password: 'root',
-      database: 'db_thisfilm'
+      database: 'db_thisfilm',
+      autoLoadEntities: true,
+      synchronize: true,
     }),
     ConfigModule.forRoot(),
+    CommonModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
