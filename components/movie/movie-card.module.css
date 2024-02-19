@@ -1,0 +1,13 @@
+.mcard:hover {
+    transform: scale(0.95, 0.95);
+}
+
+.mcard:hover .details{
+  transform: scale(0.95, 0.95);
+  display: block;
+}
+
+.details {
+  display: none;
+}
+

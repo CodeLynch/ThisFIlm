@@ -8,11 +8,13 @@ export default function MoviePage(){
             </div>
             <div className="mx-5">
                 <h1 className="text-white text-5xl font-bold">Movie Title</h1>
+                <h1 className="text-white text-xl italic">(Original Name)</h1>
                 <h1 className="text-white text-xl">Genres, Genres, Genres</h1>
-                <h1 className="text-white text-2xl"> <span className="font-bold">Starring:</span> Ulysses Bloodstone, Elise Jones, Brad Carter</h1>
-                <h1 className="text-white text-2xl"><span className="font-bold">Director:</span> P.D.Q Werner</h1>
+                <h1 className="text-white text-2xl"> <span className="font-bold">Release Date:</span> 1972-04-29</h1>
+                <h1 className="text-white text-2xl"><span className="font-bold">Language:</span> English</h1>
                 <h1 className="text-white text-2xl font-bold">Synopsis:</h1>
                 <h1 className="text-white text-xl">In the town where I was born lived a man who sailed to sea and he told us of his life in the land of submarines. So we sailed up to the sun 'til we found the sea of green and we lived beneath the waves in our yellow submarine</h1>
+                <h1 className="text-white text-xl"><span className="font-bold">Runtime:</span> 150 mins</h1>
             </div>
         </div>
         <div className="flex flex-row py-10 px-20">

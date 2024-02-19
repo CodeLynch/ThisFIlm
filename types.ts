@@ -6,13 +6,17 @@ export type User={
 }
 
 export type Movie={
-    movieId: number,
-    title: string,
-    genres: number[],
-    synopsis: string,
-    poster: string,
-    starring: string,
-    director: string,
+    "adult": false;
+    "genre_ids": number[];
+    "id": number;
+    "language": string;
+    "synopsis": string;
+    "poster": string;
+    "backdrop": string;
+    "release_date": string;
+    "title": string;
+    "original_title": string;
+    "runtime": number;
 }
 
 export type Comment={

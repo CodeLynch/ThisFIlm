@@ -53,7 +53,7 @@ export class MovieController {
         }
         };
 
-        const api_res = await fetch(url);
+        const api_res = await fetch(url, options);
         const {page, total_pages, total_results, ...data} = await api_res.json();
         data.results.map((movie)=>{
             movieData.push(movie);

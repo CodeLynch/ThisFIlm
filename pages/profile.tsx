@@ -26,7 +26,7 @@ export default function ProfilePage(){
             <UserComment/>
             <UserComment/>
             <div className="flex justify-center w-full px-2">
-                <PaginationComponent/>
+                <PaginationComponent page={1} lastPage={1}/>
             </div>
         </div>
     </div>

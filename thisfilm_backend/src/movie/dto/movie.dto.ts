@@ -8,4 +8,6 @@ export class MovieDTO{
     "backdrop": string;
     "release_date": string;
     "title": string;
+    "original_title": string;
+    "runtime": number;
 }
