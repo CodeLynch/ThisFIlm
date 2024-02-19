@@ -71,7 +71,7 @@ export class MovieController {
     async getNewMovies(
         @Req() req:Request
     ){
-        const url = `https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&sort_by=primary_release_date.desc`;
+        const url = `https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&primary_release_year=${new Date().getFullYear()}&sort_by=popularity.desc&page=${req.query.page || 1}`;
         const options = {
         method: 'GET',
         headers: {

@@ -11,7 +11,7 @@ export type Movie={
     "id": number;
     "language": string;
     "synopsis": string;
-    "poster": string;
+    "poster_path": string;
     "backdrop": string;
     "release_date": string;
     "title": string;

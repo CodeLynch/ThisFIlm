@@ -7,6 +7,10 @@
   display: block;
 }
 
+.mcard:hover .imagediv{
+  opacity: .3;
+}
+
 .details {
   display: none;
 }
