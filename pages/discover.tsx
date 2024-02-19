@@ -3,6 +3,7 @@ import PaginationComponent from "../components/pagination/pagination";
 import MovieCard from "@/components/movie/movie-card";
 import { Movie } from "@/types";
 import { GetNewMovies } from "@/helper/MovieHelper";
+import Link from "next/link";
 
 const font = Bebas_Neue({ weight:"400", subsets:['latin']});
 
@@ -21,7 +22,9 @@ export default function DiscoverPage(props:{
     <div className="grid grid-cols-4 px-10">
         {
             props.results.map((movie, key)=>{
-                return <MovieCard key={key} poster={movie.poster_path} title={movie.title} release={movie.release_date} runtime={movie.runtime}/>
+                return <Link href={`/movies/${movie.id}`}>
+                <MovieCard key={key} poster={movie.poster_path} title={movie.title} release={movie.release_date} runtime={movie.runtime}/>
+                </Link>
             })
         }
     </div>
@@ -35,8 +38,6 @@ export async function getServerSideProps(context:{query:{page:string}}){
     const {query} = context;
 
     const data = await GetNewMovies(parseInt(query.page) || 1);
-
-    console.log(data);
 
     return({
         props: data,

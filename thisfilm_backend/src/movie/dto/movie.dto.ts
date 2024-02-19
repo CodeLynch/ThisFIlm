@@ -1,10 +1,10 @@
 export class MovieDTO{
     "adult": false;
-    "genre_ids": number[];
+    "genres": number[];
     "id": number;
-    "language": string;
-    "synopsis": string;
-    "poster": string;
+    "original_language": string;
+    "overview": string;
+    "poster_path": string;
     "backdrop": string;
     "release_date": string;
     "title": string;
