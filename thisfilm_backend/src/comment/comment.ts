@@ -13,6 +13,9 @@ export class Comment{
     @Column()
     movieId:number;
 
+    @Column()
+    isRecommended:boolean;
+    
     @ManyToOne(()=>User, User => User.comments)
     user:User;
 }

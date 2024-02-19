@@ -1,3 +1,12 @@
+#Packages used for Auth
+- reflect-metadata (for excluding and serializing fields on responses)
+- cookie-parser
+- @nestjs/jwt (getting tokens)
+- passport-jwt @types/passport-jwt (getting tokens)
+- bcryptjs @types/bcryptjs (hashing passwords)
+- class-validator (for validating inputs)
+- class-transformer (needed by class-validator)
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>

@@ -47,7 +47,7 @@ export class AuthController {
         }
 
         const jwt = await this.jwtServ.signAsync({
-            id: user.id,
+            sub: user.userId,
         })
 
         response.cookie('jwt', jwt,{
@@ -63,10 +63,13 @@ export class AuthController {
     @Get('user')
     async getUser(@Req() request: Request){
         const cookie = request.cookies['jwt'];
+        
+        const {sub} = await this.jwtServ.verifyAsync(cookie);
 
-        const {id} = await this.jwtServ.verifyAsync(cookie);
+        console.log("this is the id: ",sub);
 
-        const user = await this.userServ.findOne({id});
+        const user = await this.userServ.findOne({userId:sub});
+        
         
         return user;
     }
